@@ -1,0 +1,130 @@
+.searchBar{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+
+}
+.searchBar input{
+    /* for rounded edge all corner */
+    /* border-radius: 10rem;  */
+    border-radius: 10rem 0 0 10rem;
+    border: none;
+    height: 3rem;
+    width: 40rem;
+    /* background-color:  #ffc107; */
+    background-color: #f1f1f1;
+    padding: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline: none;
+}
+
+.searchBar button{
+    color: grey;
+    height: 3rem;
+    width: 5rem;
+    font-size: 1rem;
+    border-radius: 0 10rem 10rem 0;
+    border: none;
+    background-color: #e72929;
+    color: white;
+    opacity: 0.8;
+    outline: none;
+  }
+  
+  .searchBar button:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  a{
+    color: #af1313;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    background:#ed7b09;  
+     color: white; 
+    cursor: pointer;
+  }
+
+  .image a:hover{
+    background:none; 
+    color: white;
+    cursor: pointer;
+  }
+  .price{
+  
+    color: #414141;
+    font-weight: 500;
+
+  }
+
+  .red-color {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    color:red;
+}
+.gray-color{
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  color:gray;
+ 
+}
+
+ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e4e4e4;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+li a{
+  height: 22.5rem;
+  width: 20rem;
+  border: 1px solid whitesmoke;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+}
+
+li a:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+li a img{
+  object-fit: cover;
+  height: 14.5rem;
+}
+
+.content{
+  margin-top: 0.3rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  height: 7rem;
+}
+
+
+

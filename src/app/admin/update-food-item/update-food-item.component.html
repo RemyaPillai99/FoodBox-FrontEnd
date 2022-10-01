@@ -1,0 +1,76 @@
+<admin-header></admin-header>
+<div class="col-md-6 offset-md-3">
+    <h3> Edit Food Item </h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>Food Item Name</label>
+            <input type="text" class="form-control" id="itemName" [(ngModel)]="foodItem.itemName" name="itemName">
+        </div>
+
+        <div class="form-group">
+            <label>Description </label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="foodItem.itemDesc" name="lastName">
+        </div>
+        <!-- <div class="form-group">
+            <label>Category </label>
+            <input type="text" class="form-control" id="cate" name="type" value= {{foodItem.category.categoryName}}>
+        </div> -->
+         <div class="form-group">
+            <label> Category </label>
+            <!-- <select class="form-control" id="itemCategory" name="itemCategory" [(ngModel)]="foodItem.category"> -->
+                <!-- ng-init="foodItem.category = selectedCategory" -->
+                <select class="form-control" id="itemCategory" name="itemCategory" [(ngModel)]="foodItem.category" >
+                   <option [ngValue]="foodItem.category"  selected ="selected" disabled>{{selectedCategory.categoryName}}</option>  
+                <option *ngFor="let c of categoryList" [ngValue]="c" >{{ c.categoryName }}</option>
+            </select>
+
+            <!-- <select ng-options="option.value as option.name for option in typeOptions" ng-init="form.type=typeOptions[0].value">
+            </select> -->
+
+            <!-- <label>Your first ng-select</label> 
+            <ng-select [items]="categoryList"
+                       bindLabel="categoryName"
+                       placeholder="Select city"
+                       [(ngModel)]="foodItem.category">
+            </ng-select> -->
+        </div> 
+        <div class="form-group">
+            <label for="price">Price </label>
+            <input type="text" class="form-control" id="price" [(ngModel)]="foodItem.price" name="price" required>
+        </div>
+
+        <div class="form-group">
+            <label>Image Selected Previously </label>
+            <input type="text" class="form-control" id="image" [(ngModel)]="foodImage" name="image" disabled>
+        </div>
+        <!-- select from folder -->
+ 
+      <label for="image_Url">Change Selected Image</label>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" [(ngModel)]="foodItem.image" name="image"
+                accept="image/jpeg, image/png" id="image" (change)="selectFile($event)" />
+            <label class="custom-file-label" for="image"></label>
+        </div>
+
+        <div class="form-group">
+            <img [src]="url" *ngIf="url" height="100px" width="100px" style="margin-top: 20px" alt=" ">
+        </div> 
+        <div class="form-group">
+            <label for="avail" class="form-check-label">Item Available </label>
+            <div class="form-check">
+                <input type="radio" name="available" [value]= "true"
+                [(ngModel)]="foodItem.itemAvailTag"  />Yes 
+
+                <input type="radio" name="available" [value]= "false"
+                [(ngModel)]="foodItem.itemAvailTag"  />No
+            </div>
+        </div>
+
+        <br />
+        <div class="form-group">
+            <!-- <button class = "btn btn-success btn-lg .btn-block" type ="submit">Edit Category</button> -->
+            <input class="btn btn-success btn-lg .btn-block" type="submit" name="Edit" value="Edit FoodItem">
+        </div>
+    </form>
+</div>

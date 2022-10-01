@@ -1,0 +1,21 @@
+<admin-header></admin-header>
+<div class="col-md-6 offset-md-3">
+    <h3> Edit Category </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label>Category Name</label>
+            <input type="text" class ="form-control" id = "firstName"
+                [(ngModel)] = "category.categoryName" name = "firstName">
+        </div>
+    
+        <div class="form-group">
+            <label>Description </label>
+            <input type="text" class ="form-control" id = "lastName"
+                [(ngModel)] = "category.description" name = "lastName">
+        </div>
+        <input class="btn btn-success btn-lg .btn-block" type="submit"
+				name="Edit" value="Edit Category" > 
+    
+    </form>
+    </div> 

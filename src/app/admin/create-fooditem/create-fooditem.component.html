@@ -1,0 +1,53 @@
+<admin-header></admin-header>
+<div class="col-md-6 offset-md-3">
+    <h3> Add New Food Item </h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label>Food Item Name</label>
+            <input type="text" class="form-control" id="itemName" [(ngModel)]="foodItem.itemName" name="itemName">
+        </div>
+
+        <div class="form-group">
+            <label>Description </label>
+            <input type="text" class="form-control" id="lastName" [(ngModel)]="foodItem.itemDesc" name="lastName">
+        </div>
+        <div class="form-group">
+            <label> Category </label>
+            <select class="form-control" id="itemCategory" name="itemCategory" [(ngModel)]="foodItem.category">
+                <!-- <option [ngValue]="" disabled  selected ="selected" >Choose a Category</option> -->
+                <option [ngValue]="foodItem.category"  selected ="selected" disabled>Choose a Category</option>  
+                <option *ngFor="let c of categoryList" [ngValue]="c" >{{ c.categoryName }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="price">Price </label>
+            <input type="text" class="form-control" id="price" [(ngModel)]="foodItem.price" name="price" required>
+        </div>
+
+        <label for="image_Url">Select Image </label>
+        <!-- select from folder -->
+
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" [(ngModel)]="foodItem.image" name="image"
+                accept="image/jpeg, image/png" id="image" (change)="selectFile($event)" />
+            <label class="custom-file-label" for="image"></label>
+        </div>
+
+        <div class="form-group">
+            <img [src]="url" *ngIf="url" height="100px" width="100px" style="margin-top: 20px" alt=" ">
+        </div>
+      
+
+        <div class="form-group">
+            <label for="discount">Add Discount* (Optional) </label>
+            <input type="text" class="form-control" id="discount" [(ngModel)]="foodItem.discount" name="discount">
+        </div>
+
+        <br />
+        <div class="form-group">
+            <!-- <button class = "btn btn-success btn-lg .btn-block" type ="submit">Edit Category</button> -->
+            <input class="btn btn-success btn-lg .btn-block" type="submit" name="Add" value="Add FoodItem">
+        </div>
+    </form>
+</div>

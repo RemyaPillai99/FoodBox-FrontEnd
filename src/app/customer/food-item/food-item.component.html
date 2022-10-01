@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div *ngIf="food" class="container">
+  <!-- <img src='./assets/FoodImages/food.image' alt="food.itemName"/> -->
+
+  <!-- <img class="" height="150px" width="150px" src="./assets/FoodImages/{{food.image}}" /> -->
+  <img src='./assets/FoodImages/{{food.image}}' alt="f.itemName" />
+
+  <div class="details">
+    <div class="header">
+      <span class="name">
+        <h3> {{food.itemName}}</h3>
+
+      </span>
+     
+      <div *ngIf="food.popularTag; else templateName">
+
+        <span id="boot-icon" class="bi bi-heart-fill" style="font-size: 32px; color: rgb(255, 0, 0); "></span>
+      </div>
+  
+      <ng-template #templateName>
+       
+        <!-- {{f.itemName}} -->
+        <span id="boot-icon" class="bi bi-heart-fill" style="font-size: 32px; color: rgb(84, 84, 84);"></span>
+      </ng-template>
+    </div>
+    
+    <div class="category">
+      <span>
+        {{selectedCategory.categoryName}}
+      </span>
+    </div>
+    <div class="category">
+      <span>
+        {{food.itemDesc}}
+      </span>
+    </div>
+
+    <div class="special-instruction">
+      <span>
+        <div class="md-form md-outline mt-3 ">
+          <label for="form76"><h5>Special Instructions</h5></label>
+          <textarea id="form76" class="md-textarea form-control" rows="2" placeholder="You can add any special request here"></textarea>
+        </div>
+      </span>
+    </div>
+
+    <div class="price">
+      <span>
+        {{food.price | currency}}
+      </span>
+    </div>
+
+    <button (click)="addToCart()">ADD TO CART | $ {{food.price}}</button>
+
+  </div>
+</div>

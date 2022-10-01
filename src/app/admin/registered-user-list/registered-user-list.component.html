@@ -1,0 +1,26 @@
+<admin-header></admin-header>
+
+<div class="container">
+    <span class="text-center "><h3>Registered User List</h3></span>
+    <input type="text" class="float-right form-control"  [(ngModel)]="searchKey"
+        (ngModelChange)="searchCustomer()" placeholder="Search any value..">
+
+    <table class="table table-striped" border="1" width="100%" >
+        <thead class="table-dark">
+            <tr>
+                <th>Email Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Phone No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cust of customerList">
+                <td>{{cust.emailId}}</td>
+                <td>{{cust.firstName}}</td>
+                <td>{{cust.lastName}}</td>
+                <td>{{cust.phoneNum}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

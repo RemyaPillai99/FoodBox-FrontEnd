@@ -1,0 +1,36 @@
+
+<admin-header></admin-header>
+<div class="container">
+    <span class="text-center"><h3>Order Report</h3></span>
+    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+    <table class="table table-striped" border="1" width="100%" >
+        <thead class="table-dark">
+            <tr>
+                <th>Order No.</th>
+                <th>User Name</th>
+                <th>Order Status</th>
+                <th>Contact No.</th>
+                <th>Food Item Name</th>
+                <th>Quantity</th>
+                <th>Rate </th>
+                <th>Ordered At</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ol of orderItemList">
+                <td>{{ol.order.id}}</td>
+                <td>{{ol.user.firstName}}</td>
+                <td>{{ol.order.status}}</td>
+                <td>{{ol.user.phoneNum}}</td>
+                <td>{{ol.foodItem.itemName}}</td>
+                <td>{{ol.quantity}}</td>
+                <td>{{ol.rate}}</td>
+                <td>{{ol.order.createdAt | date:'short'}}</td>
+
+                <!-- <td>{{ol.order.createdAt | date:'short'}}</td> -->
+
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

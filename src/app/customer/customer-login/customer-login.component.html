@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="container">
+    <div class="details">
+        <div>
+            <h2>Login</h2>
+        </div>
+        <br>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+            <!-- Email input -->
+            <div class="form-floating mb-3 mt-3">
+                <input type="email" id="email" class="form-control form-control-lg"
+                    placeholder="Enter a valid email address" name="emailId" [(ngModel)]="user.emailId" required
+                    [pattern]="emailPattern" />
+                <!--property binding []=""  2-way binding [()]-->
+                <label class="form-label" for="email">Email address</label>
+            </div>
+
+              <!-- Password input -->
+              <div class="form-floating mb-3 mt-3">
+                <input type="password" id="password" class="form-control form-control-lg" placeholder="Password"
+                    name="password" [(ngModel)]="user.password" required />
+                <!--property binding []=""  2-way binding [()]-->
+                <label class="form-label " for="password">Password</label>
+            </div>
+
+            <div class="text-center text-lg-start ">
+                <button type="button" type="submit" style="padding-left: 2.5rem; padding-right: 2.5rem;"
+                    [disabled]="!loginForm.valid">Login</button>
+            </div>
+
+
+            <!-- Register buttons -->
+            <div class="text-center">
+                <p>Sign Up, its free <a href="/register">Register</a></p>
+                
+            </div>
+
+            <div class="alert alert-warning" *ngIf="loginForm.submitted && isSignUpFailed">
+                Please enter valid credentials !!<br />{{ errorMessage }}
+            </div> 
+        </form>
+    </div>
+</div>
