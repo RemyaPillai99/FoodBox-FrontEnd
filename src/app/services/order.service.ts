@@ -4,14 +4,15 @@ import { Observable } from 'rxjs';
 import { CartItem } from '../models/cart-item';
 import { Order } from '../models/order';
 import { OrderItem } from '../models/order-item';
+import { GlobalConstants } from '../shared/global-constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrderService {
 
-  private shopURL = "http://localhost:8080/shop"
-  private adminURL = "http://localhost:8080/admin"
+  private shopURL = GlobalConstants.ROOT_URL+"/shop"
+  private adminURL = GlobalConstants.ROOT_URL+"/admin"
 
   constructor(private httpClient: HttpClient) { }
 

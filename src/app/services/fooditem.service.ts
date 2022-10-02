@@ -2,15 +2,16 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FoodItem } from '../models/food-item';
+import { GlobalConstants } from '../shared/global-constants';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FooditemService {
 
-  private baseURL = "http://localhost:8080/admin/foodItem"
-  private shopURL = "http://localhost:8080/shop"
-  private URL = "http://localhost:8080"
+  private baseURL = GlobalConstants.ROOT_URL+"/admin/foodItem"
+  private shopURL = GlobalConstants.ROOT_URL+"/shop"
+  private URL = GlobalConstants.ROOT_URL;
   constructor(private httpClient: HttpClient) { }
 
   getFoodItemList() : Observable <FoodItem[]>{

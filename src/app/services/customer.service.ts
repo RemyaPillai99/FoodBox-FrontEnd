@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { tap } from "rxjs/operators";
 import { IUserRegister } from '../customer/interfaces/iuser-register';
 import { Customer } from '../models/customer';
+import { GlobalConstants } from '../shared/global-constants';
 
 const USER_KEY = 'User';
 @Injectable({
@@ -15,9 +16,9 @@ export class CustomerService {
   private userSubject = new BehaviorSubject<Customer>(this.getUserFromLocalStorage());
   public userObservable: Observable<Customer>;
 
-  private baseUrl = "http://localhost:8080/users"
-  private loginURL = "http://localhost:8080/login"
-  private regURL = "http://localhost:8080/register"
+  private baseUrl = GlobalConstants.ROOT_URL+"/users"
+  private loginURL = GlobalConstants.ROOT_URL+"/login"
+  private regURL = GlobalConstants.ROOT_URL+"/register"
 
   constructor(private httpClient: HttpClient) {
     this.userObservable = this.userSubject.asObservable();

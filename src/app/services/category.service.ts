@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Category } from '../models/category';
+import { GlobalConstants } from '../shared/global-constants';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { Category } from '../models/category';
 export class CategoryService {
  
   
-  private baseURL = "http://localhost:8080/admin/category"
+  private baseURL = GlobalConstants.ROOT_URL+"/admin/category"
   constructor(private httpClient: HttpClient) { }
 
   getCategoryList() : Observable <Category[]>{
