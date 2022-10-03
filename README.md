@@ -1,6 +1,6 @@
 # FoodBox
-FoodBox is a dynamic and responsive online food delivery web application for ordering food items. FoodBox is a restaurant chain that delivers food items of different cuisines at affordable prices.
-−	It was developed using Angular and Spring boot .It was created as the Capstone Project for Post Graduate Program in Full Stack Web Development
+FoodBox is a dynamic and responsive online web application for ordering food items.
+It was developed using Angular and Spring boot .It was created as the Capstone Project for Post Graduate Program in Full Stack Web Development
 
 github link to backend : https://github.com/RemyaPillai99/FoodBox-BackEnd.git
 
