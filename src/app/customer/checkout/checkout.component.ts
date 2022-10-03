@@ -66,11 +66,6 @@ export class CheckoutComponent implements OnInit {
     this.order.address = this.fc.address.value;
     this.order.emailId = this.userService.currentUser.emailId;
 
-    // this.orderService.placeOrder(this.order).subscribe(data => {
-    //   console.log('products added to Purchase' + data);
-    //   this.cartService.clearCart(); 
-    // });
-
     this.orderService.placeOrder(this.order).subscribe({
       next:() => {
         this.cartService.clearCart(); 

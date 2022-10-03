@@ -31,7 +31,6 @@ export class CustomerLoginComponent implements OnInit {
   onSubmit() {
     //here could just pass the values instead of object IUserLogin {email password}
     this.customerService.loginUser(this.user).subscribe(data => {
-     //this.router.navigate(['/']);
      this.router.navigateByUrl(this.returnURL);
 
     },

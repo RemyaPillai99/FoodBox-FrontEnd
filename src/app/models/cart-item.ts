@@ -6,6 +6,6 @@ export class CartItem {
 
  quantity:number = 1 ;
  price: number = this.foodItem.price;
-//  spInstruction: string = '';
+ spInstruction: string = "";
 
 }

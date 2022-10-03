@@ -17,10 +17,7 @@ export class HomePageComponent implements OnInit {
   searchKey = '';
   constructor(private categoryService: CategoryService,
     private foodItemService: FooditemService,
-    activatedRoute:ActivatedRoute,private router:Router) {
-      // activatedRoute.params.subscribe((params) => {
-      //   if(params.searchTerm) this.searchTerm = params.searchTerm;
-      // });
+    private router:Router) {
      }
 
   ngOnInit(): void {
@@ -71,16 +68,5 @@ export class HomePageComponent implements OnInit {
   });
 
   }
-
-  //search
-
-  // search(term:string):void{
-  //   if(term)
-  //   this.router.navigateByUrl('/search/'+ term);
-  // }
-
-
-  
- 
 
 }

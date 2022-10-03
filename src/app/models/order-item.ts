@@ -1,4 +1,3 @@
-import { logging } from "protractor";
 import { Customer } from "./customer";
 import { FoodItem } from "./food-item";
 import { OrderDTO } from "./order-dto";

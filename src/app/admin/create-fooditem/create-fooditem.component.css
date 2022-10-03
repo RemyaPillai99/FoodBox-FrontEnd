@@ -4,21 +4,21 @@ label, .action-label {
 }
 
 input {
-	width: 60%;
-	padding: 12px;
-	border: 3px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: 6px;
-	margin-bottom: 16px;
+	width: 60%; 
+   padding: 12px;
+   border: 3px solid #ccc;
+   border-radius: 4px;
+   box-sizing: border-box;
+   margin-top: 6px;
+   margin-bottom: 16px;
 } 
 
 
 /* Style the container for inputs */
 .container {
-	/* width: 50%;
+	width: 50%;
 	margin-left: 25%;
-	margin-top: 8% */
+	margin-top: 8%;
 	position: relative;
 	z-index: 2;
 	width: 500px;
@@ -33,7 +33,18 @@ input {
 	margin-top: 1rem;
 }
 
-
 .form-control{
 	width:60%;
 }
+.form-check{
+    font-size: large;
+    margin-top: 1rem;
+    display: inline-flex;
+    min-height: 2rem;
+    padding-left: 1.5em
+}
+.select{
+	
+	margin: 10px;
+}
+

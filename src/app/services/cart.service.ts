@@ -13,7 +13,7 @@ export class CartService {
   private cart:Cart = this.getCartFromLocalStorage();
   private cartSubject: BehaviorSubject<Cart> = new BehaviorSubject(this.cart);
 
-  constructor(private httpClient: HttpClient) { }
+  constructor() { }
 
 
   addToCart(food: FoodItem): void {
@@ -25,10 +25,6 @@ export class CartService {
     this.cart.items.push(new CartItem(food));
     this.setCartToLocalStorage();
   }
-  // addToCart(itemCode: any):Observable<any>{
-  //   return this.httpClient.post(`${this.baseURL}/addToCart`,itemCode );
-  // }
-
   removeFromCart(foodItemCode : number){
     this.cart.items = this.cart.items
       .filter(item => item.foodItem.itemCode !== foodItemCode);

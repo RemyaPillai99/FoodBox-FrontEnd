@@ -15,13 +15,6 @@ export class OrderService {
   private adminURL = GlobalConstants.ROOT_URL+"/admin"
 
   constructor(private httpClient: HttpClient) { }
-
-
-  
-  // placeOrder(orderMap:any,orderItem:any):Observable<Object>{
-  //   return this.httpClient.post(`${this.shopURL}`,orderMap,orderItem);
-  // }
-
   placeOrder(orderMap:Order):Observable<Object>{
     return this.httpClient.post(`${this.shopURL}/pay`,orderMap);
   }

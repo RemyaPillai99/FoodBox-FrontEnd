@@ -58,7 +58,6 @@ export class RegisterComponent implements OnInit {
     this.userVal.firstName = fv.fname;
     this.userVal.lastName = fv.lname;
     this.userVal.password = fv.password;
-    //this.userVal.confirmPassword =fv.confirmPassword;
     this.userVal.address = fv.address;
     this.userVal.phoneNum= fv.phoneNum;
 

@@ -4,8 +4,6 @@ import { Category } from 'src/app/models/category';
 import { FoodItem } from 'src/app/models/food-item';
 import { CategoryService } from 'src/app/services/category.service';
 import { FooditemService } from 'src/app/services/fooditem.service';
-  
-// import { NgSelectModule } from '@ng-select/ng-select'; 
 
 @Component({
   selector: 'app-update-food-item',

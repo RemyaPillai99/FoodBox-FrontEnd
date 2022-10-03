@@ -56,9 +56,6 @@
                 <b>{{ foodItem.popularTag | yesNo }}</b>
             </td>
 
-            
-                <!-- <td><a href="${editLink}">Edit</a></td>  
-				<td><a href="${deleteLink}" onclick="if (!('are you sure you want to delete this Category?'))) return false">Delete</a></td> -->
                 <td><button (click) = "updateFoodItem(foodItem.itemCode)" class = "btn btn-info"> Edit</button></td>
                 <td><button class = "btn btn-danger" style="margin-left: 10px" data-bs-toggle="modal" data-bs-target="#submitModal"> Delete</button></td>
 
@@ -88,5 +85,4 @@
         </tbody>
     </table>
 
-    
 </div>
